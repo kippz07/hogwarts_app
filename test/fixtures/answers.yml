@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  gryffindor: 1.5
+  ravenclaw: 1.5
+  hufflepuff: 1.5
+  slytherin: 1.5
+
+two:
+  gryffindor: 1.5
+  ravenclaw: 1.5
+  hufflepuff: 1.5
+  slytherin: 1.5

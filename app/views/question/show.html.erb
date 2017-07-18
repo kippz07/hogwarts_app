@@ -1,0 +1,13 @@
+<h2><%= @question.text %></h2>
+<%= form_with(model: @question) do |f| %>
+  <% @question.answers.each do |answer| %>
+    <div class="field">
+      <%= label answer.tag, answer.tag %>
+      <%= f.radio_button :answer, answer.tag %>
+    </div>
+  <% end %>
+<% end %>
+
+
+
+<%= link_to 'Next', @next %>

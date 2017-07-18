@@ -7,8 +7,8 @@ class QuestionController < ApplicationController
   def show
     id = params[:id]
     @question = Question.find id
-    user = current_user
-    if user.sorted
+    @user = current_user
+    if @user.sorted
       redirect_to "/"
     end
     if id.to_i + 1 == 9
@@ -21,7 +21,10 @@ class QuestionController < ApplicationController
   def update
     id = params[:id]
     user = current_user
-    user.update_attributes(question_params)
+    user.update_attribute(:gryffindor, question_params[:gryffindor].to_f + user.gryffindor)
+    user.update_attribute(:ravenclaw, question_params[:ravenclaw].to_f + user.ravenclaw)
+    user.update_attribute(:hufflepuff, question_params[:hufflepuff].to_f + user.hufflepuff)
+    user.update_attribute(:slytherin, question_params[:slytherin].to_f + user.slytherin)
 
     if id.to_i + 1 == 9
       result = Question.houses(id, user)

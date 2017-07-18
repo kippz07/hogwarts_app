@@ -1,0 +1,2 @@
+class GreatHall < ApplicationRecord
+end

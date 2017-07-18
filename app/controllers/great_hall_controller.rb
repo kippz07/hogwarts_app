@@ -1,0 +1,2 @@
+class GreatHallController < ApplicationController
+end

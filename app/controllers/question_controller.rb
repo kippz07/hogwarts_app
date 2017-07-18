@@ -15,10 +15,12 @@ class QuestionController < ApplicationController
 
   def update
     id = params[:id]
-    @user = current_user
-    @user.update_attributes(question_params)
-    
+    user = current_user
+    user.update_attributes(question_params)
+
     if id.to_i + 1 == 9
+      result = Question.houses(id, user)
+      user.update_attribute(:house, result)
       redirect_to "/answer"
     else
       redirect_to "/question/#{id.to_i + 1}"

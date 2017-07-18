@@ -8,7 +8,7 @@
 
 user_1 = User.create!(name: "Jenny", email: "jej@me.com", password: "password")
 
-spell_1 = Spell.create!(user_id: user_1.id, name: "Spongify", description: "makes things spongy")
+spell_1 = Spell.create!(user_id: user_1.id, name: "Spongify", catagory: "Charm", description: "makes things spongy")
 
 question_1 = Question.create!({text: "Dawn or Dusk?"})
 question_2 = Question.create!({text: "Which of the following would you most hate people to call you?"})

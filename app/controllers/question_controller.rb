@@ -6,6 +6,10 @@ class QuestionController < ApplicationController
   def show
     id = params[:id]
     @question = Question.find id
+    user = current_user
+    if user.sorted
+      redirect_to "/"
+    end
     if id.to_i + 1 == 9
       @next = "/answer"
     else
@@ -21,6 +25,7 @@ class QuestionController < ApplicationController
     if id.to_i + 1 == 9
       result = Question.houses(id, user)
       user.update_attribute(:house, result)
+      user.update_attribute(:sorted, true)
       redirect_to "/answer"
     else
       redirect_to "/question/#{id.to_i + 1}"

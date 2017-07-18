@@ -6,6 +6,7 @@ class SpellsController < ApplicationController
   end
 
   def show
+    @spell = Spell.find(params[:id])
   end
 
   def new
@@ -16,37 +17,22 @@ class SpellsController < ApplicationController
   end
 
   def create
+    @user = current_user
     @spell = Spell.new(spell_params)
+    @spell.save
 
-    respond_to do |format|
-      if @spell.save
-        format.html { redirect_to @spell, notice: 'Spell was successfully created.' }
-        format.json { render :show, status: :created, location: @spell }
-      else
-        format.html { render :new }
-        format.json { render json: @spell.errors, status: :unprocessable_entity }
-      end
-    end
+    @user.spells << @spell
+    redirect_to "/"
   end
 
   def update
-    respond_to do |format|
-      if @spell.update(spell_params)
-        format.html { redirect_to @spell, notice: 'Spell was successfully updated.' }
-        format.json { render :show, status: :ok, location: @spell }
-      else
-        format.html { render :edit }
-        format.json { render json: @spell.errors, status: :unprocessable_entity }
-      end
-    end
+    @spell.update(spell_params)
+    redirect_to "/"
   end
 
   def destroy
     @spell.destroy
-    respond_to do |format|
-      format.html { redirect_to spells_url, notice: 'Spell was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to "/spells"
   end
 
   private
@@ -57,6 +43,6 @@ class SpellsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def spell_params
-      params.fetch(:spell, {})
+      params.require(:spell).permit(:name, :catagory, :description)
     end
 end

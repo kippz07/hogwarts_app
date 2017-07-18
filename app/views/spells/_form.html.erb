@@ -1,0 +1,22 @@
+<%= form_with(model: @spell) do |f| %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :type %><br />
+    <%= f.text_field :catagory%>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Submit spell" %>
+  </div>
+
+<% end %>

@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20170718082927) do
   create_table "spells", force: :cascade do |t|
     t.bigint "user_id"
     t.string "name"
+    t.string "catagory"
     t.string "latin"
     t.string "description"
     t.datetime "created_at", null: false

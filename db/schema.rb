@@ -10,12 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170717151251) do
+ActiveRecord::Schema.define(version: 20170718082927) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "answer_questions", id: false, force: :cascade do |t|
+    t.bigint "answer_id"
+    t.bigint "question_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["answer_id"], name: "index_answer_questions_on_answer_id"
+    t.index ["question_id"], name: "index_answer_questions_on_question_id"
+  end
+
   create_table "answers", force: :cascade do |t|
+    t.string "tag"
     t.float "gryffindor"
     t.float "ravenclaw"
     t.float "hufflepuff"
@@ -28,6 +38,16 @@ ActiveRecord::Schema.define(version: 20170717151251) do
     t.string "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "spells", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "name"
+    t.string "latin"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_spells_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

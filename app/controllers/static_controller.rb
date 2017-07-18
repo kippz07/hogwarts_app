@@ -1,5 +1,5 @@
 class StaticController < ApplicationController
   def home
-    @user = User.all
+    @user = current_user
   end
 end

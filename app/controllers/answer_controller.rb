@@ -4,9 +4,6 @@ class AnswerController < ApplicationController
   end
 
   def show
-  end
-
-  def update
     @user = current_user
   end
 end

@@ -14,6 +14,20 @@ class QuestionController < ApplicationController
   end
 
   def update
+    id = params[:id]
     @user = current_user
+    @user.update_attributes(question_params)
+    
+    if id.to_i + 1 == 9
+      redirect_to "/answer"
+    else
+      redirect_to "/question/#{id.to_i + 1}"
+    end
   end
+
+   private
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def question_params
+      params.require(:question).permit(:gryffindor, :ravenclaw, :hufflepuff, :slytherin)
+    end
 end

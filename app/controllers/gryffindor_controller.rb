@@ -1,15 +1,20 @@
 class GryffindorController < ApplicationController
- def index
-    @users = set_users
+  before_action :authenticate_user!
+  def index
+    @users = users
+    spells = Spell.all
+    @huff_spells = GreatHall.get_spells(@users, spells)
   end
 
   def show
     id = params[:id].to_i
-    @user = set_users[id - 1]
+    @user = users[id - 1]
+    spells = Spell.all
+    @indi_spells = GreatHall.get_indi_spells(@user, spells)
   end
 
   private
-    def set_users
+    def users
       @users = User.where(house: "Gryffindor")
     end
 end

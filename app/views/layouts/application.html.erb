@@ -3,7 +3,7 @@
   <head>
     <title>Hogwarts</title>
     <%= csrf_meta_tags %>
-    
+
     <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     
@@ -15,8 +15,9 @@
   <body>
     <ul class="hmenu">
     </ul>
+    <%= yield %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
   </body>
+  <footer></footer>
 </html>

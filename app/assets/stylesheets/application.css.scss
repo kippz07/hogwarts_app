@@ -21,10 +21,14 @@
   height: 48px;
   background-color: #500d50;
   margin: 0;
+  p {
+    display: inline-block;
+  }
 }
 
 footer {
   height: 48px;
+  width: 100%;
   background-color: #500d50;
   margin: 0;
   position: fixed;

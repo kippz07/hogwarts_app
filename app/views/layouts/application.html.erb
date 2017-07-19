@@ -10,14 +10,17 @@
     <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'%>
     <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'%>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'oridomi' %>
   </head>
 
   <body>
     <ul class="hmenu">
+      <p><%= render 'devise/menu/registration_items' %></p>
+      <p><%= render 'devise/menu/login_items' %></p>
     </ul>
     <%= yield %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
   </body>
-  <footer></footer>
+
 </html>

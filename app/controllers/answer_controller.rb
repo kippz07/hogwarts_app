@@ -10,6 +10,6 @@ class AnswerController < ApplicationController
   end
 
   def update
-    @user = current_user
+    redirect_to "/great_hall"
   end
 end

@@ -1,3 +1,66 @@
 // Place all the styles related to the static controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body {
+  background-color: black;
+  margin: 0;
+}
+
+#scroll {
+  position: absolute;
+      top: 195px;
+  left: 39%;
+  width: 22%;
+  height: 350px;
+  display: inline-block;
+  background-color: white;
+  z-index: 1;
+  padding: 6px;
+  h1 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+    font-size: 20px;
+  }
+}
+
+.black-one {
+  background-color: black;
+  left: 0;
+}
+
+.black-two {
+  background-color: black;
+  right: 0;
+}
+
+.green {
+  background-color: green;
+  right: 24%;
+}
+
+.red {
+  background-color: red;
+  left: 24%;
+}
+
+.yellow {
+  background-color: yellow;
+  left: 33%;
+}
+
+.blue {
+  background-color: blue;
+  right: 33%;
+}
+
+.banner {
+  display: inline-block;
+  width: 8%;
+  height: 715px;
+  padding: 0px;
+  position: absolute;
+}

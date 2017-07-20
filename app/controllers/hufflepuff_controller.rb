@@ -9,6 +9,7 @@ class HufflepuffController < ApplicationController
   def show
     @id = params[:id].to_i
     @user = users[@id - 1]
+    @curr_user = current_user
     spells = Spell.all
     @indi_spells = GreatHall.get_indi_spells(@user, spells)
   end

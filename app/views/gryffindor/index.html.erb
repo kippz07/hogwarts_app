@@ -1,13 +1,17 @@
-<h1>Gryffindor</h1>
+<div id="gryf-body">
+  <h1>Gryffindor Common Room</h1>
+  <div class="left">
+    <h3>Members</h3>
+    <% @users.each do |user| %>
+      <p onclick="window.location = '/great_hall/gryffindor/<%= @users.index(user) + 1 %>'"><%= user.name %></p>
+    <% end %>
+  </div>
 
-<% @users.each do |user| %>
-  <h2><%= user.name %></h2>
-  <h2><%= user.pet %></h2>
-<% end %>
-
-<% if @indi_spells.length != 0 %>
-  <% @indi_spells.each do |spell| %>
-    <h2><%= spell.name %></h2>
-    <h2><%= spell.catagory %></h2>
-  <% end %> 
-<% end %>
+  <div class="right">
+    <h3>Gryffindor Spells</h3>
+    <% @indi_spells.each do |spell| %>
+      <p><%= spell.name %> - <%= spell.catagory %></p>
+      <p class="desc">- <%= spell.description %></p>
+    <% end %>
+  </div>
+</div>

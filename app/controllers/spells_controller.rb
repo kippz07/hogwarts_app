@@ -22,17 +22,18 @@ class SpellsController < ApplicationController
     @spell.save
 
     @user.spells << @spell
-    redirect_to "/"
+    redirect_to "/great_hall/#{@user.house.downcase}"
   end
 
   def update
+    @user = current_user
     @spell.update(spell_params)
-    redirect_to "/"
+    redirect_to "/great_hall/#{@user.house.downcase}"
   end
 
   def destroy
     @spell.destroy
-    redirect_to "/spells"
+    redirect_to request.referrer
   end
 
   private

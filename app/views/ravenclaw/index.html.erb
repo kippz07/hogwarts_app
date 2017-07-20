@@ -1,11 +1,17 @@
-<h1>Ravenclaw</h1>
+<div id="raven-body">
+  <h1>Ravenclaw Common Room</h1>
+  <div class="left">
+    <h3>Members</h3>
+    <% @users.each do |user| %>
+      <p onclick="window.location = '/great_hall/ravenclaw/<%= @users.index(user) + 1 %>'"><%= user.name %></p>
+    <% end %>
+  </div>
 
-<% @users.each do |user| %>
-  <h2><%= user.name %></h2>
-  <h2><%= user.pet %></h2>
-<% end %>
-
-<% @indi_spells.each do |spell| %>
-  <h2><%= spell.name %></h2>
-  <h2><%= spell.catagory %></h2>
-<% end %>
+  <div class="right">
+    <h3>Ravenclaw Spells</h3>
+    <% @indi_spells.each do |spell| %>
+      <p><%= spell.name %> - <%= spell.catagory %></p>
+      <p class="desc">- <%= spell.description %></p>
+    <% end %>
+  </div>
+</div>

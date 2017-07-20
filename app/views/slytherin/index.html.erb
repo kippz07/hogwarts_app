@@ -9,7 +9,9 @@
 
   <div class="right">
     <h3>Slytherin Spells</h3>
-    <p><%= link_to 'Add new spell', new_spell_path %></p>
+    <% if @curr_user.house == "Slytherin" %>
+      <p><%= link_to 'Add new spell', new_spell_path %></p>
+    <% end %>
     <% @indi_spells.each do |spell| %>
       <p><%= spell.name %> - <%= spell.catagory %></p>
       <p class="desc">- <%= spell.description %></p>

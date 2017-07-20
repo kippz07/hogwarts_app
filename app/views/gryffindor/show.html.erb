@@ -18,7 +18,7 @@
       <p class="desc">- <%= spell.description %></p>
       <% if @user == @curr_user %>
         <p><%= link_to 'Edit', edit_spell_path(spell) %> | <%= link_to 'Delete', spell, method: :delete %></p>
-        <% end %>
+      <% end %>
     <% end %>
   </div>
 </div>

@@ -15,15 +15,20 @@ body {
   width: 22%;
   height: 350px;
   display: inline-block;
-  background-color: white;
   z-index: 1;
   padding: 6px;
   h1 {
     text-align: center;
+    position: relative;
+    margin-top: 58px;
   }
   p {
     text-align: center;
+    position: relative;
     font-size: 20px;
+  }
+  #scroll-img {
+    position: absolute;
   }
 }
 

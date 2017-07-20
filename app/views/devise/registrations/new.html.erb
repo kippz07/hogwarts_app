@@ -33,12 +33,12 @@
 
   <div class="field">
     <%= f.label :wand_wood %><br />
-    <%= f.text_field :wand_wood %>
+    <%= f.select :wand_wood, [['Apple','apple'],['Ash','ash'],['Beech','beech'],['Blackthorn', 'blackthorn'],['Cherry', 'cherry'],['Chestnut', 'chestnut'],['Ebony', 'ebony'], ['Elder', 'elder'],['Holly', 'holly'],['Oak', 'oak'],['Maple', 'maple'], ['Pine', 'pine'],['Rowan', 'rowan'],['Vine', 'vine'], ['Walnut', 'walnut'], ['Willow', 'willow'], ['Yew', 'yew']] %>
   </div>
 
   <div class="field">
     <%= f.label :wand_core %><br />
-    <%= f.text_field :wand_core %>
+    <%= f.select :wand_wood, [['Unicorn tail', 'unicorn tail'],['Dragon heartstring'],['Pheonix feather', 'pheonix feather'],['Veela', 'veela'], ['Thestral tail', 'thestrail tail'], ['Troll whisker', 'troll whisker'], ['Bone', 'bone'], ['Basilisk horn', 'basilisk horn']] %>
   </div>
 
   <div class="field">
@@ -48,7 +48,7 @@
 
   <div class="field">
     <%= f.label :staff%><br />
-    <%= f.text_field :staff %>
+    <%= f.select :staff, [['Yes', 'true'], ['No', 'false']] %>
   </div>
 
   <div class="actions">

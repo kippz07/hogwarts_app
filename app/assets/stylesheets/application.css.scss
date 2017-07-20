@@ -21,8 +21,29 @@
   height: 48px;
   background-color: #500d50;
   margin: 0;
-  p {
+  div {
     display: inline-block;
+    float: right;
+    padding: 14px;
+    margin-right: 83px;
+    p {
+      display: inline-block;
+      color: white;
+      a {
+        color: white;
+      }
+    }
+  }
+  #nav-hall {
+    color: white;
+  }
+  #nav-hall:hover {
+    text-decoration: underline;
+    color: white;
+    display: inline-block;
+    background-color: black;
+    cursor: default;
+
   }
 }
 

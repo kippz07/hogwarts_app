@@ -16,8 +16,11 @@
   <body>
     <main>
       <ul class="hmenu">
-        <p><%= render 'devise/menu/registration_items' %></p>
-        <p><%= render 'devise/menu/login_items' %></p>
+        <div>
+          <p id="nav-hall" onclick="window.location = '/great_hall'">great hall</p>
+          <p> | <%= render 'devise/menu/registration_items' %> | </p>
+          <p><%= render 'devise/menu/login_items' %></p>
+        </div>
       </ul>
       <%= yield %>
       <p class="notice"><%= notice %></p>

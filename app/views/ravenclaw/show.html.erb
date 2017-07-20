@@ -1,8 +1,23 @@
-<h1>Ravenclaw</h1>
+<div id="raven-body">
+  <h1>Ravenclaw Common Room</h1>
+  <div class="left">
+    <h3><%= @user.name %></h3>
+    <p><%= @user.dob %></p>
+    <p><%= @user.pet %></p>
+    <p><%= @user.wand_wood %></p>
+    <p><%= @user.wand_core %></p>
+    <p><%= @user.staff %></p>
+  </div>
 
-<% @users.each do |user| %>
-  <h2><%= user.name %></h2>
-  <h2><%= user.email %></h2>
-<% end %>
-
-<br>
+  <div class="right">
+    <h3>Member Spells</h3>
+    <p><%= link_to 'Add new spell', new_spell_path %></p>
+    <% @indi_spells.each do |spell| %>
+      <p><%= spell.name %> - <%= spell.catagory %></p>
+      <p class="desc">- <%= spell.description %></p>
+      <% if @user == @curr_user %>
+        <p><%= link_to 'Edit', edit_spell_path(spell) %> | <%= link_to 'Delete', spell, method: :delete %></p>
+        <% end %>
+    <% end %>
+  </div>
+</div>

@@ -1,3 +1,32 @@
 // Place all the styles related to the great_hall controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.hall-banner {
+  transform: skewX(-63.7deg);
+  width: 17%;
+  display: inline-block;
+  height: 715px;
+  padding: 0px;
+  position: absolute;
+}
+
+.hall-green {
+  background: linear-gradient(to right, #0a6f02 , #10884a);
+  right: 14%;
+}
+
+.hall-red {
+  background: linear-gradient(to right, red , #ea4b4b);
+  left: 15%;
+}
+
+.hall-yellow {
+  background: linear-gradient(to right, yellow , #fff6b3);
+  left: 33%;
+}
+
+.hall-blue {
+  background: linear-gradient(to right, #02589c , #408bc5);
+  right: 32%;
+}

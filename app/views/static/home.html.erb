@@ -1,7 +1,11 @@
 
 <section>
-  <div class="banner red"></div>
-  <div class="banner yellow"></div>
+  <div class="banner red">
+    <%= image_tag "gryffindor.png", class: "house-badge" %>
+  </div>
+  <div class="banner yellow">
+    <%= image_tag "hufflepuff.png", class: "house-badge" %>
+  </div>
   <div id="scroll">
     <h1>Welcome to Hogwarts</h1>
     <br><br>
@@ -10,7 +14,11 @@
     <p>To our old hats, <%= render 'devise/menu/login_items' %></p>
 
   </div>
-  <div class="banner blue"></div>
-  <div class="banner green"></div>
-<footer></footer>
+  <div class="banner blue">
+    <%= image_tag "ravenclaw.png", class: "house-badge" %>
+  </div>
+  <div class="banner green">
+    <%= image_tag "slytherin.png", class: "house-badge" %>
+  </div>
+
 </section>

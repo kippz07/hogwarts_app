@@ -38,22 +38,28 @@ body {
 }
 
 .green {
-  background-color: green;
+  background: linear-gradient(to right, #0a6f02 , #10884a);
   right: 24%;
 }
 
 .red {
-  background-color: red;
+  background: linear-gradient(to right, red , #ea4b4b);
   left: 24%;
 }
 
+.house-badge {
+  width: 100%;
+  position: relative;
+  top: 40%;
+}
+
 .yellow {
-  background-color: yellow;
+  background: linear-gradient(to right, yellow , #fff6b3);
   left: 33%;
 }
 
 .blue {
-  background-color: blue;
+  background: linear-gradient(to right, #02589c , #408bc5);
   right: 33%;
 }
 

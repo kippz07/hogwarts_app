@@ -1,16 +1,16 @@
 <div id="huff-body">
-  <h1>Hufflepuff</h1>
+  <h1>Hufflepuff Common Room</h1>
   <div class="left">
-    <h2>Members</h2>
+    <h3>Members</h3>
     <% @users.each do |user| %>
-      <p><%= user.name %></p>
+      <p onclick="window.location = '/great_hall/hufflepuff/<%= @users.index(user) + 1 %>'"><%= user.name %></p>
     <% end %>
   </div>
 
   <div class="right">
+    <h3>Hufflepuff Spells</h3>
     <% @indi_spells.each do |spell| %>
-      <h2><%= spell.name %></h2>
-      <h2><%= spell.catagory %></h2>
+      <p><%= spell.name %> - <%= spell.catagory %></p>
     <% end %>
   </div>
 </div>

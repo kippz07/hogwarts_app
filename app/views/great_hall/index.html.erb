@@ -1,11 +1,18 @@
 <!-- <h1>Welcome to the Great Hall!</h1> -->
 
-<%= link_to "Gryffindor", "/great_hall/gryffindor" %>
-<%= link_to "Hufflepuff", "/great_hall/hufflepuff" %>
-<%= link_to "Ravenclaw", "/great_hall/ravenclaw" %>
-<%= link_to "Slytherin", "/great_hall/slytherin" %>
-
-<div class="hall-banner hall-red"></div>
-<div class="hall-banner hall-yellow"></div>
-<div class="hall-banner hall-blue"></div>
-<div class="hall-banner hall-green"></div>
+<div class="hall-banner hall-red" onclick="window.location = '/great_hall/gryffindor'">
+  <%= image_tag "gryffindor.png", class: "hall-badge" %>
+  <h1>Gryffindor</h1>
+</div>
+<div class="hall-banner hall-yellow" onclick="window.location = '/great_hall/hufflepuff'">
+  <%= image_tag "hufflepuff.png", class: "hall-badge" %>
+  <h1>Hufflepuff</h1>
+</div>
+<div class="hall-banner hall-blue" onclick="window.location = '/great_hall/ravenclaw'">
+  <%= image_tag "ravenclaw.png", class: "hall-badge" %>
+  <h1>Ravenclaw</h1>
+</div>
+<div class="hall-banner hall-green" onclick="window.location = '/great_hall/slytherin'">
+  <%= image_tag "slytherin.png", class: "hall-badge" %>
+  <h1>Slytherin</h1>
+</div>

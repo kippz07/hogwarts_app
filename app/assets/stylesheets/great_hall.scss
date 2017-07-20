@@ -1,6 +1,6 @@
-// Place all the styles related to the great_hall controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/*Place all the styles related to the great_hall controller here.
+They will automatically be included in application.css.
+You can use Sass (SCSS) here: http://sass-lang.com/*/
 
 .hall-banner {
   transform: skewX(-63.7deg);
@@ -9,6 +9,18 @@
   height: 715px;
   padding: 0px;
   position: absolute;
+  h1 {
+    transform: skewX(63.7deg) rotateZ(-26.3deg);
+    position: relative;
+    top: 38%;
+    right: 8px;
+    font-family: "Luminari";
+    color: black;
+  }
+}
+
+body {
+  max-width: 1450px;
 }
 
 .hall-green {
@@ -29,4 +41,14 @@
 .hall-blue {
   background: linear-gradient(to right, #02589c , #408bc5);
   right: 32%;
+}
+
+.hall-badge {
+  transform: skewX(63.7deg) rotateZ(-26.3deg);
+  width: 100%;
+  position: relative;
+  top: 48%;
+  width: 42%;
+  right: 70px;
+  position: absolute;
 }

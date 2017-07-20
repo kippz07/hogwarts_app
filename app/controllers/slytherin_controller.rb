@@ -3,7 +3,7 @@ class SlytherinController < ApplicationController
   def index
     @users = users
     spells = Spell.all
-    @huff_spells = GreatHall.get_spells(@users, spells)
+    @indi_spells = GreatHall.get_spells(@users, spells)
   end
 
   def show

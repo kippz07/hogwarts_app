@@ -5,7 +5,9 @@
   <h2><%= user.pet %></h2>
 <% end %>
 
-<% @indi_spells.each do |spell| %>
-  <h2><%= spell.name %></h2>
-  <h2><%= spell.catagory %></h2>
+<% if @indi_spells.length != 0 %>
+  <% @indi_spells.each do |spell| %>
+    <h2><%= spell.name %></h2>
+    <h2><%= spell.catagory %></h2>
+  <% end %> 
 <% end %>

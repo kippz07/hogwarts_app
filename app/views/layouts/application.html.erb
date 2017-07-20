@@ -14,13 +14,15 @@
   </head>
 
   <body>
-    <ul class="hmenu">
-      <p><%= render 'devise/menu/registration_items' %></p>
-      <p><%= render 'devise/menu/login_items' %></p>
-    </ul>
-    <%= yield %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <main>
+      <ul class="hmenu">
+        <p><%= render 'devise/menu/registration_items' %></p>
+        <p><%= render 'devise/menu/login_items' %></p>
+      </ul>
+      <%= yield %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <footer></footer>
+    </main>
   </body>
-  <footer></footer>
 </html>

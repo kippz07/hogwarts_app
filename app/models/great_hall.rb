@@ -8,7 +8,7 @@ class GreatHall < ApplicationRecord
         end
       end
     end
-    indi_spells
+    indi_spells 
   end
 
   def self.get_indi_spells(user, spells)

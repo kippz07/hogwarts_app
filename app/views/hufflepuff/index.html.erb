@@ -1,14 +1,16 @@
-<h1>Hufflepuff</h1>
-<div class="left">
-  <% @users.each do |user| %>
-    <h2><%= user.name %></h2>
-    <h2><%= user.email %></h2>
-  <% end %>
-</div>
+<div id="huff-body">
+  <h1>Hufflepuff</h1>
+  <div class="left">
+    <h2>Members</h2>
+    <% @users.each do |user| %>
+      <p><%= user.name %></p>
+    <% end %>
+  </div>
 
-<div class="right">
-  <% @indi_spells.each do |spell| %>
-    <h2><%= spell.name %></h2>
-    <h2><%= spell.catagory %></h2>
-  <% end %>
+  <div class="right">
+    <% @indi_spells.each do |spell| %>
+      <h2><%= spell.name %></h2>
+      <h2><%= spell.catagory %></h2>
+    <% end %>
+  </div>
 </div>

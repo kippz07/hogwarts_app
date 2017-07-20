@@ -11,6 +11,7 @@
     <h3>Hufflepuff Spells</h3>
     <% @indi_spells.each do |spell| %>
       <p><%= spell.name %> - <%= spell.catagory %></p>
+      <p class="desc">- <%= spell.description %></p>
     <% end %>
   </div>
 </div>

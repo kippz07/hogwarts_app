@@ -1,0 +1,111 @@
+.scroll {
+  position: absolute;
+  top: 195px;
+  left: 39%;
+  width: 22%;
+  height: 350px;
+  display: inline-block;
+  z-index: 1;
+  padding: 6px;
+  h1 {
+    text-align: center;
+    position: relative;
+    margin-top: 58px;
+    font-family: "Savoye LET";
+    color: green;
+    font-size: 40px;
+  }
+  p {
+    text-align: center;
+    position: relative;
+    font-size: 20px;
+    font-family: "Savoye LET";
+    color: green;
+    font-size: 30px;
+  }
+  .scroll-img {
+    position: absolute;
+    z-index: -1;
+  }
+  h2 {
+    font-family: "Savoye LET";
+    text-align: center;
+    padding-top: 32px;
+    color: green;
+  }
+  label {
+    display: inline-block;
+    font-family: "Savoye LET";
+    color: green;
+  }
+  input {
+    display: inline-block;
+    font-family: "Savoye LET";
+    height: 22px;
+    padding-top: 5px;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #9a9a9a;
+    background-color: white;
+    padding-left: 6px;
+  }
+  a {
+    font-family: "Savoye LET";
+    padding-left: 27px;
+    font-size: 20px;
+    color: green;
+  }
+  form {
+    padding-left: 27px;
+    font-size: 20px;
+    .actions {
+      font-family: "Savoye LET";
+      color: green;
+    }
+  }
+}
+
+.black-one {
+  background-color: black;
+  left: 0;
+}
+
+.black-two {
+  background-color: black;
+  right: 0;
+}
+
+.green {
+  background: linear-gradient(to right, #0a6f02 , #10884a);
+  right: 24%;
+}
+
+.red {
+  background: linear-gradient(to right, red , #ea4b4b);
+  left: 24%;
+}
+
+.house-badge {
+  width: 100%;
+  position: relative;
+  top: 40%;
+}
+
+.yellow {
+  background: linear-gradient(to right, yellow , #fff6b3);
+  left: 33%;
+}
+
+.blue {
+  background: linear-gradient(to right, #02589c , #408bc5);
+  right: 33%;
+}
+
+.banner {
+  display: inline-block;
+  width: 8%;
+  height: 715px;
+  padding: 0px;
+  position: absolute;
+}

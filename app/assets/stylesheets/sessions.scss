@@ -1,4 +1,4 @@
-.scroll {
+#sesh-scroll {
   position: absolute;
   top: 195px;
   left: 39%;
@@ -23,7 +23,7 @@
     color: green;
     font-size: 30px;
   }
-  .scroll-img {
+  .sech-scroll-img {
     position: absolute;
     z-index: -1;
   }
@@ -52,7 +52,7 @@
   }
   a {
     font-family: "Savoye LET";
-    padding-left: 27px;
+    margin-left: 27px;
     font-size: 20px;
     color: green;
   }

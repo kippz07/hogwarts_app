@@ -1,21 +1,38 @@
-<h2><%= @question.text %></h2>
-
-<% @question.answers.each do |answer| %>
-
-  <%= form_with(model: @question) do |f| %>
-  <%= f.hidden_field :tag, value: answer.tag%>
-  <%= f.hidden_field :gryffindor, value: answer.gryffindor%>
-  <%= f.hidden_field :ravenclaw, value: answer.ravenclaw%>
-  <%= f.hidden_field :hufflepuff, value: answer.hufflepuff%>
-  <%= f.hidden_field :slytherin, value: answer.slytherin%>
-
-  <div class="field">
-    <%= f.submit value: answer.tag %>
+<section>
+  <div class="banner red">
+    <%= image_tag "gryffindor.png", class: "house-badge" %>
   </div>
-  <% end %>
-<% end %>
-<p><%= @user.name %></p>
-<p><%= @user.gryffindor %></p>
-<p><%= @user.ravenclaw %></p>
-<p><%= @user.hufflepuff %></p>
-<p><%= @user.slytherin %></p>
+  <div class="banner yellow">
+    <%= image_tag "hufflepuff.png", class: "house-badge" %>
+  </div>
+  <div class="scroll-question">
+    <%= image_tag "scrolllarge.png", class: "img-responsive scroll-img" %>
+
+    <h2><%= @question.text %></h2>
+
+    <div class="answers">
+      <% @question.answers.each do |answer| %>
+
+        <%= form_with(model: @question) do |f| %>
+        <%= f.hidden_field :tag, value: answer.tag%>
+        <%= f.hidden_field :gryffindor, value: answer.gryffindor%>
+        <%= f.hidden_field :ravenclaw, value: answer.ravenclaw%>
+        <%= f.hidden_field :hufflepuff, value: answer.hufflepuff%>
+        <%= f.hidden_field :slytherin, value: answer.slytherin%>
+
+        <div class="field">
+          <%= f.submit value: answer.tag %>
+        </div>
+        <% end %>
+      <% end %>
+    </div>
+
+  </div>
+  <div class="banner blue">
+    <%= image_tag "ravenclaw.png", class: "house-badge" %>
+  </div>
+  <div class="banner green">
+    <%= image_tag "slytherin.png", class: "house-badge" %>
+  </div>
+
+</section>

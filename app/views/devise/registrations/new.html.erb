@@ -1,53 +1,63 @@
+<section>
+  <div class="banner red">
+    <%= image_tag "gryffindor.png", class: "house-badge" %>
+  </div>
+  <div class="banner yellow">
+    <%= image_tag "hufflepuff.png", class: "house-badge" %>
+  </div>
+  <div id="scroll-register">
+    <%= image_tag "scrolllarge.png", id: "scroll-img", class: "img-responsive" %>
+
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name %>
     <%= f.text_field :name, autofocus: true %>
   </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
+  <div class="field email">
+    <%= f.label :email %>
     <%= f.email_field :email%>
   </div>
 
-  <div class="field">
+  <div class="field password">
     <%= f.label :password %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
+    <em>(<%= @minimum_password_length %> char min)</em>
+    <% end %>
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
+  <div class="field password">
+    <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
-  <div class="field">
-    <%= f.label :dob %><br />
+  <div class="field dob">
+    <%= f.label :dob %>
     <%= f.date_field :dob %>
   </div>
 
   <div class="field">
-    <%= f.label :wand_wood %><br />
+    <%= f.label :wand_wood %>
     <%= f.select :wand_wood, [['Apple','apple'],['Ash','ash'],['Beech','beech'],['Blackthorn', 'blackthorn'],['Cherry', 'cherry'],['Chestnut', 'chestnut'],['Ebony', 'ebony'], ['Elder', 'elder'],['Holly', 'holly'],['Oak', 'oak'],['Maple', 'maple'], ['Pine', 'pine'],['Rowan', 'rowan'],['Vine', 'vine'], ['Walnut', 'walnut'], ['Willow', 'willow'], ['Yew', 'yew']] %>
   </div>
 
   <div class="field">
-    <%= f.label :wand_core %><br />
+    <%= f.label :wand_core %>
     <%= f.select :wand_wood, [['Unicorn tail', 'unicorn tail'],['Dragon heartstring'],['Pheonix feather', 'pheonix feather'],['Veela', 'veela'], ['Thestral tail', 'thestrail tail'], ['Troll whisker', 'troll whisker'], ['Bone', 'bone'], ['Basilisk horn', 'basilisk horn']] %>
   </div>
 
   <div class="field">
-    <%= f.label :pet %><br />
+    <%= f.label :pet %>
     <%= f.text_field :pet %>
   </div>
 
   <div class="field">
-    <%= f.label :staff%><br />
+    <%= f.label :staff%>
     <%= f.select :staff, [['Yes', 'true'], ['No', 'false']] %>
   </div>
 
@@ -56,4 +66,12 @@
   </div>
 <% end %>
 
-<%= render "users/shared/links" %>
+  </div>
+  <div class="banner blue">
+    <%= image_tag "ravenclaw.png", class: "house-badge" %>
+  </div>
+  <div class="banner green">
+    <%= image_tag "slytherin.png", class: "house-badge" %>
+  </div>
+
+</section>

@@ -1,3 +1,119 @@
 // Place all the styles related to the registrations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#scroll-register {
+  position: absolute;
+  top: 142px;
+  left: 39%;
+  height: 350px;
+  display: inline-block;
+  z-index: 1;
+  padding: 6px;
+  h1 {
+    text-align: center;
+    position: relative;
+    margin-top: 58px;
+    font-family: "Savoye LET";
+    color: green;
+    font-size: 40px;
+  }
+  p {
+    text-align: center;
+    position: relative;
+    font-size: 20px;
+    font-family: "Savoye LET";
+    color: green;
+    font-size: 30px;
+  }
+  #scroll-img {
+    position: absolute;
+    z-index: -1;
+  }
+  h2 {
+    font-family: "Savoye LET";
+    text-align: center;
+    padding-top: 32px;
+  }
+  label {
+    display: inline-block;
+    font-family: "Savoye LET";
+  }
+  input {
+    display: inline-block;
+    font-family: "Savoye LET";
+    height: 22px;
+    padding-top: 5px;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #9a9a9a;
+    background-color: white;
+  }
+  em {
+    display: inline-block;
+    font-family: "Savoye LET";
+    padding-top: 4px
+  }
+  a {
+    font-family: "Savoye LET";
+  }
+  form {
+    padding-left: 27px;
+    font-size: 20px;
+    select {
+      font-family: "Savoye LET";
+      height: 22px;
+    }
+    .dob input {
+      width: 140px;
+    }
+    .email input {
+      width: 180px;
+    }
+  }
+}
+
+.black-one {
+  background-color: black;
+  left: 0;
+}
+
+.black-two {
+  background-color: black;
+  right: 0;
+}
+
+.green {
+  background: linear-gradient(to right, #0a6f02 , #10884a);
+  right: 24%;
+}
+
+.red {
+  background: linear-gradient(to right, red , #ea4b4b);
+  left: 24%;
+}
+
+.house-badge {
+  width: 100%;
+  position: relative;
+  top: 40%;
+}
+
+.yellow {
+  background: linear-gradient(to right, yellow , #fff6b3);
+  left: 33%;
+}
+
+.blue {
+  background: linear-gradient(to right, #02589c , #408bc5);
+  right: 33%;
+}
+
+.banner {
+  display: inline-block;
+  width: 8%;
+  height: 715px;
+  padding: 0px;
+  position: absolute;
+}

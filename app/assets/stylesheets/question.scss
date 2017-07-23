@@ -72,6 +72,7 @@
     font-family: "Savoye LET";
     padding-top: 4px
   }
+
   a {
     font-family: "Savoye LET";
     font-size: 30px;
@@ -84,6 +85,7 @@
     cursor: pointer;
     background: none;
   }
+  
   form {
     text-align: center;
     select {
@@ -112,46 +114,15 @@
   }
 }
 
-.black-one {
-  background-color: black;
-  left: 0;
+#begin {
+  text-align: center;
+  margin-top: 70px;
+  a {
+    font-size: 30px;
+  }
+  a:hover {
+    cursor: pointer;
+    background: none;
+  }
 }
 
-.black-two {
-  background-color: black;
-  right: 0;
-}
-
-.green {
-  background: linear-gradient(to right, #0a6f02 , #10884a);
-  right: 24%;
-}
-
-.red {
-  background: linear-gradient(to right, red , #ea4b4b);
-  left: 24%;
-}
-
-.house-badge {
-  width: 100%;
-  position: relative;
-  top: 40%;
-}
-
-.yellow {
-  background: linear-gradient(to right, yellow , #fff6b3);
-  left: 33%;
-}
-
-.blue {
-  background: linear-gradient(to right, #02589c , #408bc5);
-  right: 33%;
-}
-
-.banner {
-  display: inline-block;
-  width: 8%;
-  height: 715px;
-  padding: 0px;
-  position: absolute;
-}

@@ -23,22 +23,25 @@
     color: green;
     font-size: 30px;
   }
-  .sech-scroll-img {
+  #sesh-scroll-img {
     position: absolute;
     z-index: -1;
   }
   h2 {
+    position: relative;
     font-family: "Savoye LET";
     text-align: center;
     padding-top: 32px;
     color: green;
   }
   label {
+    position: relative;
     display: inline-block;
     font-family: "Savoye LET";
     color: green;
   }
   input {
+    position: relative;
     display: inline-block;
     font-family: "Savoye LET";
     height: 22px;
@@ -51,12 +54,14 @@
     padding-left: 6px;
   }
   a {
+    position: relative;
     font-family: "Savoye LET";
     margin-left: 27px;
     font-size: 20px;
     color: green;
   }
   form {
+    position: relative;
     padding-left: 27px;
     font-size: 20px;
     .actions {
@@ -66,46 +71,4 @@
   }
 }
 
-.black-one {
-  background-color: black;
-  left: 0;
-}
-
-.black-two {
-  background-color: black;
-  right: 0;
-}
-
-.green {
-  background: linear-gradient(to right, #0a6f02 , #10884a);
-  right: 24%;
-}
-
-.red {
-  background: linear-gradient(to right, red , #ea4b4b);
-  left: 24%;
-}
-
-.house-badge {
-  width: 100%;
-  position: relative;
-  top: 40%;
-}
-
-.yellow {
-  background: linear-gradient(to right, yellow , #fff6b3);
-  left: 33%;
-}
-
-.blue {
-  background: linear-gradient(to right, #02589c , #408bc5);
-  right: 33%;
-}
-
-.banner {
-  display: inline-block;
-  width: 8%;
-  height: 715px;
-  padding: 0px;
-  position: absolute;
-}
+ 

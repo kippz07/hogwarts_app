@@ -1,4 +1,37 @@
-<h1>Answer</h1>
-<h2><%= @user.house %></h2>
+<section>
+  <% if @user.house == "Gryffindor" %>
+    <div class="banner red">
+      <%= image_tag "gryffindor.png", class: "house-badge" %>
+    </div>
+  <% end %>
 
-<%= link_to "Take me to the Great Hall!", "/great_hall" %>
+  <% if @user.house == "Hufflepuff" %>
+  <div class="banner yellow">
+    <%= image_tag "hufflepuff.png", class: "house-badge" %>
+  </div>
+  <% end %>
+
+  <div class="scroll">
+    <%= image_tag "scroll.png", class: "img-responsive scroll-img" %>
+
+    <h1>Congratulations!</h1>
+    <h3>You have been sorted into</h3>
+    <h2><%= @user.house %></h2>
+
+    <%= link_to "Take me to the Great Hall!", "/great_hall" %> 
+
+  </div>
+
+  <% if @user.house == "Ravenclaw" %>
+    <div class="banner blue">
+      <%= image_tag "ravenclaw.png", class: "house-badge" %>
+    </div>
+  <% end %>
+
+  <% if @user.house == "Slytherin" %>
+    <div class="banner green">
+      <%= image_tag "slytherin.png", class: "house-badge" %>
+    </div>
+  <% end %>
+
+</section>

@@ -19,6 +19,9 @@ You can use Sass (SCSS) here: http://sass-lang.com/*/
   }
 }
 
+.hall-banner:hover {
+  cursor: pointer;
+}
 
 .hall-green {
   background: linear-gradient(to right, #0a6f02 , #10884a);

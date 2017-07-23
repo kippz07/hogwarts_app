@@ -1,6 +1,7 @@
 <div id="gryf-body">
   <h1 onclick="window.location = '/great_hall/gryffindor'">Gryffindor Common Room</h1>
   <div class="left">
+    <%= image_tag "users_background.png", class: "parchment-left" %>
     <h3>Members</h3>
     <div class="spell-list">
       <% @users.each do |user| %>
@@ -10,6 +11,7 @@
   </div>
 
   <div class="right">
+    <%= image_tag "users_background.png", class: "parchment-right" %>
     <h3>Gryffindor Spells</h3>
     <% if @curr_user.house == "Gryffindor" %>
       <p><%= link_to 'Add new spell', new_spell_path %></p>

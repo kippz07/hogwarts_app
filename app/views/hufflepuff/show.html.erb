@@ -1,6 +1,7 @@
 <div id="huff-body">
   <h1 onclick="window.location = '/great_hall/hufflepuff'">Hufflepuff Common Room</h1>
   <div class="left">
+    <%= image_tag "users_background.png", class: "parchment-left" %>
     <h3><%= @user.name %></h3>
     <p>Date of birth: <%= @user.dob %></p>
     <p>Pet: <%= @user.pet %></p>
@@ -10,8 +11,11 @@
   </div>
 
   <div class="right">
+    <%= image_tag "users_background.png", class: "parchment-right" %>
     <h3>Member Spells</h3>
-    <p><%= link_to 'Add new spell', new_spell_path %></p>
+    <% if @user == @curr_user %>
+      <p><%= link_to 'Add new spell', new_spell_path %></p>
+    <% end %>
     <div class="spell-list">
       <% @indi_spells.each do |spell| %>
         <p><%= spell.name %> - <%= spell.catagory %></p>

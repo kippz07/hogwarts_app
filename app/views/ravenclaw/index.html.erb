@@ -1,6 +1,7 @@
 <div id="raven-body">
   <h1 onclick="window.location = '/great_hall/ravenclaw'">Ravenclaw Common Room</h1>
   <div class="left">
+    <%= image_tag "users_background.png", class: "parchment-left" %>
     <h3>Members</h3>
     <div class="spell-list">
       <% @users.each do |user| %>
@@ -9,7 +10,8 @@
     </div>
   </div>
 
-  <div class="right">
+  <div class="right img-responsive">
+    <%= image_tag "users_background.png", class: "parchment-right" %>
     <h3>Ravenclaw Spells</h3>
     <% if @curr_user.house == "Ravenclaw" %>
       <p><%= link_to 'Add new spell', new_spell_path %></p>

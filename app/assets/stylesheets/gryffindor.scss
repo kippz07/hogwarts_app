@@ -5,7 +5,6 @@
 .right {
   display: inline-block;
   float: right;
-  background-color: white;
   margin-right: 17%;
   padding: 30px;
   width: 25%;
@@ -13,14 +12,17 @@
   font-family: "Apple Chancery";
   margin-bottom: 55px;
   h3 {
+    position: relative;
     text-decoration: underline;
     text-align: center;
   }
   p {
+    position: relative;
     font-family: "Apple Chancery";
     font-size: 20px;
   }
   .desc {
+    position: relative;
     font-size: 15px;
   }
 }
@@ -28,7 +30,6 @@
 .left {
   display: inline-block;
   float: left;
-  background-color: white;
   margin-left: 17%;
   padding: 30px;
   width: 25%;
@@ -36,13 +37,29 @@
   font-family: "Apple Chancery";
   margin-bottom: 55px;
   h3 {
+    position: relative;
     text-decoration: underline;
     text-align: center;
   }
   p {
+    position: relative;
     font-family: "Apple Chancery";
     font-size: 20px;
   }
+}
+
+.parchment-right {
+  position: absolute;
+  width: 490px;
+  right: 12%;
+  top: 30px;
+}
+
+.parchment-left {
+  position: absolute;
+  width: 490px;
+  left: 12%;
+  top: 30px;
 }
 
 #gryf-body {

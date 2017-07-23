@@ -2,9 +2,11 @@
   <h1 onclick="window.location = '/great_hall/gryffindor'">Gryffindor Common Room</h1>
   <div class="left">
     <h3>Members</h3>
-    <% @users.each do |user| %>
-      <p onclick="window.location = '/great_hall/gryffindor/<%= @users.index(user) + 1 %>'"><%= user.name %></p>
-    <% end %>
+    <div class="spell-list">
+      <% @users.each do |user| %>
+        <p onclick="window.location = '/great_hall/gryffindor/<%= @users.index(user) + 1 %>'"><%= user.name %></p>
+      <% end %>
+    </div>
   </div>
 
   <div class="right">

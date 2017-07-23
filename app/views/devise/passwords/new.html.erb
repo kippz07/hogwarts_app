@@ -8,34 +8,23 @@
   <div class="sesh-scroll">
     <%= image_tag "scroll.png", class: "img-responsive sesh-scroll-img" %>
 
-    <h2>Log in</h2>
+    <h2>Forgot your password?</h2>
 
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+      <%= devise_error_messages! %>
+
       <div class="field">
-        <%= f.label :email %>
+        <%= f.label :email %><br />
         <%= f.email_field :email, autofocus: true %>
       </div>
 
-      <div class="field">
-        <%= f.label :password %>
-        <%= f.password_field :password, autocomplete: "off" %>
-      </div>
-
-      <% if devise_mapping.rememberable? -%>
-        <div class="field">
-          <%= f.check_box :remember_me %>
-          <%= f.label :remember_me %>
-        </div>
-      <% end -%>
-
       <div class="actions">
-        <%= f.submit "Log in" %>
+        <%= f.submit "Send me reset password instructions" %>
       </div>
     <% end %>
 
-    <%= render "users/shared/links" %>
-
- </div>
+<%= render "users/shared/links" %>
+  </div>
   <div class="banner blue">
     <%= image_tag "ravenclaw.png", class: "house-badge" %>
   </div>

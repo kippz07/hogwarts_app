@@ -19,7 +19,7 @@
     color: green;
     font-size: 30px;
   }
-  a {
+  #hall-link { 
     text-align: center;
     position: relative;
     font-family: "Savoye LET";
@@ -28,7 +28,7 @@
     padding-left: 36px;
     top: 15px;
   }
-  a:hover {
+  #hall-link:hover {
     cursor: pointer;
     background: none;
   }

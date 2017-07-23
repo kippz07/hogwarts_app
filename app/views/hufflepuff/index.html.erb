@@ -12,9 +12,11 @@
     <% if @curr_user.house == "Hufflepuff" %>
       <p><%= link_to 'Add new spell', new_spell_path %></p>
     <% end %>
-    <% @indi_spells.each do |spell| %>
-      <p><%= spell.name %> - <%= spell.catagory %></p>
-      <p class="desc">- <%= spell.description %></p>
-    <% end %>
+    <div class="spell-list">
+      <% @indi_spells.each do |spell| %>
+        <p><%= spell.name %> - <%= spell.catagory %></p>
+        <p class="desc">- <%= spell.description %></p>
+      <% end %>
+    </div>
   </div>
 </div>

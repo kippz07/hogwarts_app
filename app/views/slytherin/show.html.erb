@@ -12,12 +12,14 @@
   <div class="right">
     <h3>Member Spells</h3>
     <p><%= link_to 'Add new spell', new_spell_path %></p>
-    <% @indi_spells.each do |spell| %>
-      <p><%= spell.name %> - <%= spell.catagory %></p>
-      <p class="desc">- <%= spell.description %></p>
-      <% if @user == @curr_user %>
-        <p><%= link_to 'Edit', edit_spell_path(spell) %> | <%= link_to 'Delete', spell, method: :delete %></p>
+    <div class="spell-list">
+      <% @indi_spells.each do |spell| %>
+        <p><%= spell.name %> - <%= spell.catagory %></p>
+        <p class="desc">- <%= spell.description %></p>
+        <% if @user == @curr_user %>
+          <p><%= link_to 'Edit', edit_spell_path(spell) %> | <%= link_to 'Delete', spell, method: :delete %></p>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
 </div>

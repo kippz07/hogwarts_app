@@ -1,5 +1,12 @@
-<h1>New Spell</h1>
+<div id="spell-body">
 
-<%= render 'form', spell: @spell %>
+  <div id="scroll-spells">
+    <%= image_tag "scroll.png", id: "spell-scroll", class: "img-responsive" %>
+    <h1>Create a Spell</h1>
 
-<%= link_to 'Back', spells_path %>
+    <%= render 'form', spell: @spell %>
+
+    <%= link_to 'Back', spells_path %>
+  </div>
+
+</div>

@@ -18,7 +18,6 @@ class SpellsController < ApplicationController
 
   def create
     @user = current_user
-    byebug
     @new_spell = Spell.new(spell_params)
     @new_spell.save
 

@@ -1,17 +1,17 @@
 <%= form_with(model: @spell) do |f| %>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name %>
     <%= f.text_field :name, autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :type %><br />
+    <%= f.label :type %>
     <%= f.select :catagory, [['Charm', 'charm'],['Hex', 'hex'],['Jinx', 'jinx'],['Curse', 'curse'],['Transfiguration', 'transfiguration'],['Healing spell', 'healling spell'],['Counter-spell', 'counter-spell']]%>
   </div>
 
   <div class="field">
-    <%= f.label :description %><br />
+    <%= f.label :description %>
     <%= f.text_field :description %>
   </div>
 

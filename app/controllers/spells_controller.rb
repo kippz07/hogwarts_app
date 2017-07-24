@@ -17,6 +17,7 @@ class SpellsController < ApplicationController
   end
 
   def create
+   
     @user = current_user
     @new_spell = Spell.create(spell_params)
     @new_spell.user_id = @user.id

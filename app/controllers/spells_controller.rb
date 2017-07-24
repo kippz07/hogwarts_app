@@ -18,10 +18,9 @@ class SpellsController < ApplicationController
 
   def create
     @user = current_user
-    @new_spell = Spell.new(spell_params)
+    @new_spell = Spell.create(spell_params)
+    @new_spell.user_id = @user.id
     @new_spell.save
-
-    @user.spells << @new_spell
     redirect_to "/great_hall/#{@user.house.downcase}"
   end
 

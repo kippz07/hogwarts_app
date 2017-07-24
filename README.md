@@ -1,24 +1,30 @@
-# README
+# hogwarts-app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The ultimate Harry Potter fansite - get sorted into a house and create your own spells!
 
-Things you may want to cover:
+## How to run
 
-* Ruby version
+ - Clone the git repository
+ - Run bundle in the terminal
+ - Start the rails server with rails s
+ - Go to localhost:3000 in your browser
+ - Enter Hogwarts!
 
-* System dependencies
+## Languages and Frameworks
 
-* Configuration
+- Ruby 2.4.1
+- Rails 5.1.2
+- Postgresql
+- Devise
+- Bootstrap sass
 
-* Database creation
+## Screenshots
 
-* Database initialization
+Login screen
+<img src= "app/assets/images/login.png" alt="Instructions screen"/>
 
-* How to run the test suite
+Displaying result of the sorting quiz
+<img src= "app/assets/images/sorted.png" alt="Instructions screen"/>
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+User page
+<img src= "app/assets/images/user.png" alt="Instructions screen"/>
